@@ -2,7 +2,4 @@ streamlit
 pandas
 numpy
 keras
-datetime
-PIL
-cv2
 opencv-python 
