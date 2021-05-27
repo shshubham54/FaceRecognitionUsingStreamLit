@@ -106,13 +106,13 @@ def main():
     image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
 
     if image_file is not None:
-		our_image = Image.open(image_file)
-		st.text("Original Image")
-		st.image(our_image)
-		img=np.array(our_image)
-		data=Image.fromarray(img)
-		data.save("data/temp.jpg")
-		img = "data/temp.jpg"
+        our_image = Image.open(image_file)
+        st.text("Original Image")
+        st.image(our_image)
+        img=np.array(our_image)
+        data=Image.fromarray(img)
+        data.save("data/temp.jpg")
+        img = "data/temp.jpg"
 
 
     if st.button("Mark Attendance"):
