@@ -57,13 +57,13 @@ def get_embedding(model, face_pixels):
 def mark_attendance(name):
   today = date.today()
   d1 = today.strftime("%d%m%Y")
-  sheet = pd.read_csv('https://github.com/shshubham54/FaceRecognitionUsingStreamLit/tree/main/data/attendance.csv')
+  sheet = pd.read_csv("data/attendance.csv")
   if(d1 not in sheet):
     sheet[d1]=0
   child = 'dev'
   row_index = np.where(sheet['Name']==child)[0][0]
   sheet.at[row_index,d1] = 1
-  sheet.to_csv('/data/attendance.csv', index=False)
+  sheet.to_csv("data/attendance.csv", index=False)
   total_classes = sheet.shape[1]-1
   child_row = sheet.loc[sheet['Name']==child].values[0]
   child_total_attendance= sum(child_row[1:])
