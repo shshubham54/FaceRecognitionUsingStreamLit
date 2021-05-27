@@ -11,9 +11,9 @@ from datetime import date
 
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-model = pickle.load(open('/data/face_recognition_model.pkl', 'rb'))
-out_encoder=pickle.load(open('/data/out_encoder.pkl', 'rb'))
-facenet_model = load_model('/data/facenet_keras.h5')
+model = pickle.load(open('https://github.com/shshubham54/FaceRecognitionUsingStreamLit/tree/main/data/face_recognition_model.pkl', 'rb'))
+out_encoder=pickle.load(open('https://github.com/shshubham54/FaceRecognitionUsingStreamLit/tree/main/data/out_encoder.pkl', 'rb'))
+facenet_model = load_model('https://github.com/shshubham54/FaceRecognitionUsingStreamLit/tree/main/data/facenet_keras.h5')
 
 default_image_size = tuple((160,160))
 image_size = 0
@@ -57,7 +57,7 @@ def get_embedding(model, face_pixels):
 def mark_attendance(name):
   today = date.today()
   d1 = today.strftime("%d%m%Y")
-  sheet = pd.read_csv('/data/attendance.csv')
+  sheet = pd.read_csv('https://github.com/shshubham54/FaceRecognitionUsingStreamLit/tree/main/data/attendance.csv')
   if(d1 not in sheet):
     sheet[d1]=0
   child = 'dev'
