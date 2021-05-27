@@ -11,9 +11,9 @@ from datetime import date
 
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-model = pickle.load(open('/FaceRecognitionUsingStreamLit/tree/main/data/face_recognition_model.pkl', 'rb'))
-out_encoder=pickle.load(open('/FaceRecognitionUsingStreamLit/tree/main/data/out_encoder.pkl', 'rb'))
-facenet_model = load_model('/FaceRecognitionUsingStreamLit/tree/main/data/facenet_keras.h5')
+model = pickle.load(open("data/face_recognition_model.pkl", 'rb'))
+out_encoder=pickle.load(open("data/out_encoder.pkl", 'rb'))
+facenet_model = load_model("data/facenet_keras.h5")
 
 default_image_size = tuple((160,160))
 image_size = 0
