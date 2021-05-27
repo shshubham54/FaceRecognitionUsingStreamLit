@@ -4,3 +4,5 @@ numpy
 keras
 opencv-python
 opencv-contrib-python
+wheel
+dlib
