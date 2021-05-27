@@ -2,4 +2,3 @@ streamlit
 pandas
 numpy
 keras
-opencv-python 
