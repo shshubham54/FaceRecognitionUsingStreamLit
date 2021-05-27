@@ -111,8 +111,8 @@ def main():
         st.image(our_image)
         img=np.array(our_image)
         img=Image.fromarray(img)
-        #data.save("temp.jpg")
-        #img = "/content/temp.jpg"
+        data.save("data/temp.jpg")
+        img = "data/temp.jpg"
 
 
     if st.button("Mark Attendance"):
