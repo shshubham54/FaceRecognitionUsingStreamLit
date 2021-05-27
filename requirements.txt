@@ -4,5 +4,4 @@ numpy
 tensorflow
 opencv-python
 opencv-contrib-python
-wheel
-
+scikit-learn
