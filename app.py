@@ -110,7 +110,7 @@ def main():
         st.text("Original Image")
         st.image(our_image)
         img=np.array(our_image)
-        img=Image.fromarray(img)
+	data=Image.fromarray(img)
         data.save("data/temp.jpg")
         img = "data/temp.jpg"
 
