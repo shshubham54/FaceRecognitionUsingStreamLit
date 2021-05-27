@@ -4,4 +4,4 @@ numpy
 tensorflow
 opencv-python
 opencv-contrib-python
-scikit-learn
+scikit-learn = 0.22.1
