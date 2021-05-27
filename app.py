@@ -110,9 +110,9 @@ def main():
         st.text("Original Image")
         st.image(our_image)
         img=np.array(our_image)
-        data=Image.fromarray(img)
-        data.save("temp.jpg")
-        img = "/content/temp.jpg"
+        img=Image.fromarray(img)
+        #data.save("temp.jpg")
+        #img = "/content/temp.jpg"
 
 
     if st.button("Mark Attendance"):
