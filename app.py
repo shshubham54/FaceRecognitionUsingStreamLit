@@ -224,7 +224,7 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
     app_loopback()
-    app_object_detection()
+    #app_object_detection()
     image_file=None
     #image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
 
