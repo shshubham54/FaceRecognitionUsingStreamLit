@@ -37,6 +37,14 @@ WEBRTC_CLIENT_SETTINGS = ClientSettings(
     media_stream_constraints={"video": True, "audio": True},
 )
 
+def app_loopback():
+    """ Simple video loopback """
+    webrtc_streamer(
+        key="loopback",
+        mode=WebRtcMode.SENDRECV,
+        client_settings=WEBRTC_CLIENT_SETTINGS,
+        video_processor_factory=None,  # NoOp
+    )
 
 #app object detection try
 def app_object_detection():
@@ -215,6 +223,7 @@ def main():
     </body>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
+    app_loopback()
     app_object_detection()
     image_file=None
     #image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
