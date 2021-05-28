@@ -6,5 +6,3 @@ opencv-python
 opencv-contrib-python
 scikit-learn == 0.22.1
 streamlit_webrtc==0.20.1
-typing_extensions==3.10.0.0
-pydub==0.25.1
