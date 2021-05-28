@@ -44,36 +44,6 @@ def app_object_detection():
     This model and code are based on
     https://github.com/robmarkcole/object-detection-app
     """
-    MODEL_URL = "https://github.com/robmarkcole/object-detection-app/raw/master/model/MobileNetSSD_deploy.caffemodel"  # noqa: E501
-    MODEL_LOCAL_PATH = HERE / "./models/MobileNetSSD_deploy.caffemodel"
-    PROTOTXT_URL = "https://github.com/robmarkcole/object-detection-app/raw/master/model/MobileNetSSD_deploy.prototxt.txt"  # noqa: E501
-    PROTOTXT_LOCAL_PATH = HERE / "./models/MobileNetSSD_deploy.prototxt.txt"
-
-    CLASSES = [
-        "background",
-        "aeroplane",
-        "bicycle",
-        "bird",
-        "boat",
-        "bottle",
-        "bus",
-        "car",
-        "cat",
-        "chair",
-        "cow",
-        "diningtable",
-        "dog",
-        "horse",
-        "motorbike",
-        "person",
-        "pottedplant",
-        "sheep",
-        "sofa",
-        "train",
-        "tvmonitor",
-    ]
-    download_file(MODEL_URL, MODEL_LOCAL_PATH, expected_size=23147564)
-    download_file(PROTOTXT_URL, PROTOTXT_LOCAL_PATH, expected_size=29353)
 
     class Detection(NamedTuple):
         name: str
