@@ -46,15 +46,6 @@ def recv(frame: av.VideoFrame) -> av.VideoFrame:
         data.save("data/temp.jpg")
         timage = Image.open("data/temp.jpg")
         st.image(timage)
-        blob = cv2.dnn.blobFromImage(
-            cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5
-        )
-        self._net.setInput(blob)
-        detections = self._net.forward()
-        annotated_image, result = self._annotate_image(image, detections)
-         # NOTE: This `recv` method is called in another thread,
-        # so it must be thread-safe.
-        self.result_queue.put(result)
         return av.VideoFrame.from_ndarray(annotated_image, format="bgr24")
 
 def app_loopback():
@@ -66,6 +57,7 @@ def app_loopback():
         client_settings=WEBRTC_CLIENT_SETTINGS,
         video_processor_factory=None,  # NoOp
     )
+    recv()
     
 
 
@@ -260,7 +252,8 @@ def main():
         data.save("data/temp.jpg")
         img = "data/temp.jpg"
 
-
+    if st.button("STOP"):
+	recv()
     if st.button("Mark Attendance"):
         result_img= detect_faces(img)
         st.success(result_img)
