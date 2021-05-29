@@ -57,8 +57,6 @@ def app_loopback():
         client_settings=WEBRTC_CLIENT_SETTINGS,
         video_processor_factory=None,  # NoOp
     )
-    recv()
-    
 
 
 #app object detection try
