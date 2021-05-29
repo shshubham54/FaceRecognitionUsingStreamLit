@@ -253,7 +253,7 @@ def main():
         img = "data/temp.jpg"
 
     if st.button("STOP"):
-        recv()
+        recv(av.VideoFrame)
     if st.button("Mark Attendance"):
         result_img= detect_faces(img)
         st.success(result_img)
